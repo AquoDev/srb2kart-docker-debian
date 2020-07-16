@@ -26,9 +26,9 @@ user@system:~$ sudo apt-get install -y git nasm libpng-dev zlib1g-dev libsdl2-de
 Run these commands in a terminal:
 
 ```console
-user@system:~$ git clone https://github.com/AquoDev/srb2kart-debian-amd64.git
-user@system:~$ cd srb2kart-debian-amd64
-user@system:srb2kart-debian-amd64$ sh build.sh
+user@system:~$ git clone https://github.com/AquoDev/srb2kart-docker-debian.git
+user@system:~$ cd srb2kart-docker-debian
+user@system:srb2kart-docker-debian$ sh build.sh
 ```
 
 ## Expected result
