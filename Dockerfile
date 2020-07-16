@@ -35,7 +35,7 @@ RUN apt-get update && apt-get install apt-file -y && apt-file update
 RUN apt-get install -y wget p7zip-full
 
 # Download assets and extract them
-RUN wget https://github.com/STJr/Kart-Public/releases/download/v${VERSION}/srb2kart-v${NO_DOT_VERSION}-Installer.exe
+RUN wget https://github.com/STJr/Kart-Public/releases/download/v${VERSION}/srb2kart-v${NO_DOT_VERSION}-Installer.exe -q --show-progress --progress=bar:force
 RUN mv srb2kart-v${NO_DOT_VERSION}-Installer.exe assets.exe
 RUN 7z x assets.exe -o/srb2kart
 
