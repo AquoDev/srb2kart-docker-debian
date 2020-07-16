@@ -15,10 +15,10 @@ This project was born after having problems with _Linux Installation Instruction
 * `libsdl2-mixer-dev`
 * `libgme-dev`
 * `libopenmpt-dev`
-* `libcurl4-gnutls-dev`
+* `libcurl4-openssl-dev`
 
 ```console
-user@system:~$ sudo apt-get install -y git nasm libpng-dev zlib1g-dev libsdl2-dev libsdl2-mixer-dev libgme-dev libopenmpt-dev libcurl4-gnutls-dev
+user@system:~$ sudo apt-get install -y git nasm libpng-dev zlib1g-dev libsdl2-dev libsdl2-mixer-dev libgme-dev libopenmpt-dev libcurl4-openssl-dev
 ```
 
 ## Steps to follow

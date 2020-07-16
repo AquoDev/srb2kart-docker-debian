@@ -8,7 +8,7 @@ ARG VERSION
 
 # Install essential tools and libraries
 RUN apt-get update && apt-get install apt-file -y && apt-file update
-RUN apt-get install -y build-essential git nasm libpng-dev zlib1g-dev libsdl2-dev libsdl2-mixer-dev libgme-dev libopenmpt-dev libcurl4-gnutls-dev
+RUN apt-get install -y build-essential git nasm libpng-dev zlib1g-dev libsdl2-dev libsdl2-mixer-dev libgme-dev libopenmpt-dev libcurl4-openssl-dev
 
 # Clone the repo and checkout v${VERSION} tag (example: v1.2)
 RUN git clone https://github.com/STJr/Kart-Public.git /srb2kart
@@ -18,7 +18,7 @@ RUN git checkout -q v${VERSION}
 # Time to compile (it can take a while)
 ENV LIBGME_CFLAGS=
 ENV LIBGME_LDFLAGS=-lgme
-RUN make -C src/ LINUX64=1
+RUN make -C src/ LINUX64=1 GCC91=1
 
 
 ##################
