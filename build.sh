@@ -1,7 +1,19 @@
 #!/bin/sh
 
-# Value that can be changed in every new srb2kart release
-VERSION=1.2
+# COMMAND TO RUN THIS SCRIPT:
+# VERSION=(version number without `v`) sh build.sh
+#
+# EXAMPLE:
+# VERSION=1.2 sh build.sh
+
+# Exit script if any command fails
+set -e
+
+# Check that VERSION is not empty
+if [ -z "$VERSION" ]; then
+    echo "/!\\ You forgot to add VERSION= before the command!"
+    exit 1
+fi
 
 # Make useful values to handle the process
 NO_DOT_VERSION=`echo $VERSION | sed 's/[.]//g'`

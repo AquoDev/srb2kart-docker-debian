@@ -28,8 +28,10 @@ Run these commands in a terminal:
 ```console
 user@system:~$ git clone https://github.com/AquoDev/srb2kart-docker-debian.git
 user@system:~$ cd srb2kart-docker-debian
-user@system:srb2kart-docker-debian$ sh build.sh
+user@system:srb2kart-docker-debian$ VERSION=1.2 sh build.sh
 ```
+
+⚠ `VERSION` must not have any **`v`** character before itself. This value can change between releases.
 
 ## Expected result
 
