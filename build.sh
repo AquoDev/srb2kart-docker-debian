@@ -9,6 +9,6 @@ NAME=srb2kart-docker-debian
 IMAGE=$NAME:$VERSION
 
 # Build the game and copy from the container release files and assets to host (./build directory)
-docker build --build-arg VERSION=$VERSION --build-arg NO_DOT_VERSION=$NO_DOT_VERSION . -t $IMAGE
+docker image build --rm --tag $IMAGE --build-arg VERSION=$VERSION --build-arg NO_DOT_VERSION=$NO_DOT_VERSION .
 docker run --rm --name $NAME -d $IMAGE
 docker cp $NAME:/build .
